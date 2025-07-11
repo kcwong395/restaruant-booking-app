@@ -22,7 +22,7 @@ public class BookingRequestValidator {
         }
 
         if (bookingRequest.tableSize() <= 0 || bookingRequest.tableSize() > MAX_TABLE_SIZE) {
-            errors.add(String.format("Table size must be greater than 0 and smaller than %d.", MAX_TABLE_SIZE));
+            errors.add(String.format("Table size must be greater than 0 and smaller than or equals to %d.", MAX_TABLE_SIZE));
         }
 
         if (bookingRequest.date() == null || bookingRequest.date().trim().isEmpty()) {
